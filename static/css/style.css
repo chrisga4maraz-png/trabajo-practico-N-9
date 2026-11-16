@@ -1,0 +1,1039 @@
+
+/* ==========================================
+   LA FÁBRICA DE LAS MILANESAS
+   BLACK FRIDAY | CATÁLOGO
+========================================== */
+
+:root {
+    --primary: #c8202b;
+    --primary-dark: #94151e;
+    --primary-light: #ed3541;
+
+    --background: #111113;
+    --surface: #1b1b1f;
+    --surface-light: #242429;
+
+    --text: #f8f8f8;
+    --text-muted: #a4a4aa;
+
+    --border: rgba(255,255,255,0.09);
+
+    --shadow: 0 12px 35px rgba(0,0,0,0.25);
+    --shadow-hover: 0 20px 45px rgba(0,0,0,0.4);
+
+    --radius: 16px;
+    --transition: .3s ease;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(200,32,43,.10), transparent 55%),
+        var(--background);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==========================================
+   BIENVENIDA BLACK FRIDAY
+========================================== */
+
+.bf-welcome-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity .4s ease,
+        visibility .4s ease;
+}
+
+.bf-welcome-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.bf-welcome-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+    min-height: 490px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 35px 40px 25px;
+    overflow: hidden;
+
+    text-align: center;
+    color: #fff;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(190,35,42,.30),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #292323,
+            #111010 70%
+        );
+
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 22px;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.65),
+        inset 0 1px rgba(255,255,255,.08);
+
+    transform: translateY(35px) scale(.94);
+
+    transition:
+        transform .5s cubic-bezier(.2,.8,.2,1);
+}
+
+.bf-welcome-overlay.active .bf-welcome-card {
+    transform: translateY(0) scale(1);
+}
+
+/* ETIQUETA */
+
+.bf-welcome-tag {
+    position: relative;
+    z-index: 2;
+
+    padding: 9px 19px;
+
+    color: #fff;
+    background: rgba(189,37,45,.18);
+
+    border: 1px solid rgba(229,57,66,.55);
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+/* CONTENIDO */
+
+.bf-welcome-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.bf-welcome-intro {
+    margin: 25px 0 15px;
+
+    color: #e7b4b5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.bf-welcome-content h2 {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    color: #fff;
+    font-size: clamp(55px, 10vw, 90px);
+    font-weight: 1000;
+    line-height: .88;
+    letter-spacing: -4px;
+
+    text-shadow: 0 8px 25px rgba(0,0,0,.5);
+}
+
+.bf-welcome-content h2 span {
+    color: #e53942;
+}
+
+.bf-welcome-divider {
+    width: 65px;
+    height: 3px;
+
+    margin: 27px auto 20px;
+
+    background: #e53942;
+    border-radius: 5px;
+}
+
+.bf-welcome-content h3 {
+    margin: 0;
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.bf-welcome-slogan {
+    max-width: 390px;
+    margin: 17px auto 25px;
+
+    color: #d3caca;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* BOTÓN DE BIENVENIDA */
+
+.bf-welcome-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 16px 25px;
+
+    color: #fff;
+    background: linear-gradient(135deg, #d52e38, #a81721);
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(190,35,42,.3);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.bf-welcome-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(190,35,42,.45);
+}
+
+.bf-welcome-button span {
+    font-size: 20px;
+}
+
+/* DECORACIÓN */
+
+.bf-welcome-decoration {
+    position: absolute;
+    right: -15px;
+    bottom: 35px;
+
+    color: rgba(255,255,255,.035);
+    font-size: 190px;
+    font-weight: 1000;
+    line-height: 1;
+
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.bf-welcome-footer {
+    position: relative;
+    z-index: 2;
+
+    margin: 25px 0 0;
+
+    color: #a99b9b;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   ENCABEZADO BLACK FRIDAY
+========================================== */
+
+.header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #151515;
+    overflow: hidden;
+}
+
+.black-friday-banner {
+    position: relative;
+    width: 100%;
+    min-height: 390px;
+
+    padding: 30px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(190,35,42,.28),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #242020 0%,
+            #171515 50%,
+            #090909 100%
+        );
+
+    border-bottom: 4px solid #bd252d;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.45),
+        inset 0 -30px 70px rgba(0,0,0,.25);
+}
+
+/* MARCA */
+
+.bf-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.black-friday-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    background: #bd252d;
+    color: white;
+
+    font-size: 19px;
+    font-weight: 1000;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(189,37,45,.35);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    line-height: 1.1;
+}
+
+.logo-text strong {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+.logo-text small {
+    margin-top: 5px;
+
+    color: #d0c5c5;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.bf-edition {
+    padding: 9px 16px;
+
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.06);
+}
+
+/* PROTAGONISTA */
+
+.bf-main {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    padding: 25px 0;
+}
+
+.bf-small {
+    display: block;
+    margin-bottom: 15px;
+
+    color: #e7a1a3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.bf-main h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    margin: 0;
+
+    color: #fff;
+    font-size: clamp(65px, 10vw, 125px);
+    font-weight: 1000;
+    line-height: .83;
+    letter-spacing: -5px;
+
+    text-shadow: 0 8px 25px rgba(0,0,0,.5);
+}
+
+.bf-main h1 span {
+    color: #e53942;
+    text-shadow: 0 5px 25px rgba(229,57,66,.25);
+}
+
+.bf-main p {
+    margin-top: 22px;
+
+    color: #d7d0d0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* PIE DEL ENCABEZADO */
+
+.bf-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    color: #e7e0e0;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.bf-star {
+    color: #e53942;
+    font-size: 18px;
+}
+
+/* DETALLES DECORATIVOS */
+
+.bf-decoration {
+    position: absolute;
+    z-index: 1;
+
+    color: rgba(255,255,255,.035);
+    font-weight: 1000;
+
+    pointer-events: none;
+}
+
+.bf-decoration-one {
+    top: 22%;
+    left: -20px;
+
+    font-size: 180px;
+    transform: rotate(-15deg);
+}
+
+.bf-decoration-two {
+    right: -25px;
+    bottom: 5%;
+
+    font-size: 130px;
+    transform: rotate(-15deg);
+}
+
+
+/* ==========================================
+   NAVEGACIÓN DE CATEGORÍAS
+========================================== */
+
+.category-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(25,25,29,.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.category-container {
+    max-width: 1450px;
+    min-height: 62px;
+
+    margin: auto;
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.category-link {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 26px;
+
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+
+    transition: var(--transition);
+}
+
+.category-link::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 0;
+    height: 3px;
+
+    background: var(--primary-light);
+    border-radius: 10px;
+
+    transform: translateX(-50%);
+    transition: var(--transition);
+}
+
+.category-link:hover,
+.category-link.active {
+    color: white;
+}
+
+.category-link:hover::after,
+.category-link.active::after {
+    width: 55%;
+}
+
+
+/* ==========================================
+   CATÁLOGO
+========================================== */
+
+.catalogo {
+    max-width: 1450px;
+
+    margin: auto;
+    padding: 85px 5%;
+}
+
+.catalogo-heading {
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: var(--primary-light);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.catalogo-heading h2 {
+    font-size: 38px;
+    font-weight: 1000;
+    letter-spacing: -1px;
+}
+
+.catalogo-heading p {
+    margin-top: 12px;
+
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   SECCIONES DE PRODUCTOS
+========================================== */
+
+.product-section {
+    margin-bottom: 75px;
+    scroll-margin-top: 90px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.section-line {
+    flex: 1;
+    height: 2px;
+
+    background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 23px;
+}
+
+.catalogo-loading {
+    grid-column: 1 / -1;
+
+    padding: 40px 20px;
+
+    background: var(--surface);
+    border: 1px dashed rgba(255,255,255,.15);
+    border-radius: var(--radius);
+
+    color: var(--text-muted);
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   TARJETAS DE PRODUCTOS
+========================================== */
+
+.product-card {
+    overflow: hidden;
+
+    background: linear-gradient(145deg, #252529, #19191d);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(237,53,65,.55);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+    background: var(--surface-light);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.07);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.product-description {
+    min-height: 40px;
+    margin-bottom: 16px;
+
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.product-price {
+    color: var(--primary-light);
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+.footer {
+    background: #0b0b0d;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    max-width: 1450px;
+
+    margin: auto;
+    padding: 60px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand h2 {
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+.footer-brand p {
+    margin-top: 6px;
+
+    color: var(--primary-light);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.footer-info h3 {
+    margin-bottom: 16px;
+
+    color: var(--primary-light);
+    font-size: 13px;
+}
+
+.footer-info p {
+    margin-bottom: 9px;
+
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding: 22px 5%;
+
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #77777e;
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .category-link {
+        padding: 0 15px;
+        font-size: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 18px;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .black-friday-banner {
+        min-height: 340px;
+        padding: 24px 5%;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text strong {
+        font-size: 14px;
+    }
+
+    .bf-edition {
+        font-size: 8px;
+        padding: 7px 10px;
+        letter-spacing: 1px;
+    }
+
+    .bf-main h1 {
+        font-size: clamp(58px, 15vw, 85px);
+        letter-spacing: -3px;
+    }
+
+    .bf-small {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .bf-main p {
+        font-size: 12px;
+    }
+
+    .bf-bottom {
+        gap: 9px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .bf-decoration-one {
+        font-size: 110px;
+    }
+
+    .bf-decoration-two {
+        font-size: 80px;
+    }
+
+    .category-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        padding: 0;
+    }
+
+    .category-link {
+        min-height: 44px;
+        padding: 8px 4px;
+        font-size: 10px;
+    }
+
+    .catalogo {
+        padding: 55px 4%;
+    }
+
+    .catalogo-heading {
+        margin-bottom: 45px;
+    }
+
+    .catalogo-heading h2 {
+        font-size: 29px;
+    }
+
+    .product-section {
+        margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 12px;
+    }
+
+    .product-info {
+        padding: 13px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+    .product-description {
+        font-size: 10px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        padding: 42px 6%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+}
+
+
+/* ==========================================
+   BIENVENIDA EN CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+    .bf-welcome-overlay {
+        padding: 15px;
+    }
+
+    .bf-welcome-card {
+        min-height: 430px;
+        padding: 28px 20px 22px;
+        border-radius: 17px;
+    }
+
+    .bf-welcome-content h2 {
+        font-size: clamp(52px, 15vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .bf-welcome-content h3 {
+        font-size: 12px;
+    }
+
+    .bf-welcome-slogan {
+        font-size: 12px;
+    }
+
+    .bf-welcome-button {
+        padding: 15px 18px;
+        font-size: 10px;
+    }
+
+    .bf-welcome-footer {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .bf-welcome-decoration {
+        font-size: 130px;
+    }
+}
+
+
+/* ==========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================== */
+
+@media (max-width: 380px) {
+
+    .bf-edition {
+        display: none;
+    }
+
+    .bf-bottom {
+        flex-wrap: wrap;
+    }
+
+    .bf-welcome-content h3 {
+        font-size: 10px;
+    }
+
+    .bf-welcome-button {
+        gap: 8px;
+        padding: 14px 13px;
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================
+   ACCESIBILIDAD Y MOVIMIENTO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}

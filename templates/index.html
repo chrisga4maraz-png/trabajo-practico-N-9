@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="La Fábrica de las Milanesas. Conocé nuestro catálogo de productos, elaborados y promociones.">
+
+    <title>La Fábrica de las Milanesas | Catálogo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- =====================================
+         BIENVENIDA BLACK FRIDAY
+    ====================================== -->
+
+    <div class="bf-welcome-overlay" id="bfWelcome"
+         role="dialog" aria-modal="true"
+         aria-labelledby="bfWelcomeTitle">
+
+        <div class="bf-welcome-card">
+
+            <span class="bf-welcome-tag">EDICIÓN ESPECIAL</span>
+
+            <div class="bf-welcome-content">
+
+                <p class="bf-welcome-intro">¡LLEGÓ EL MOMENTO DE APROVECHAR!</p>
+
+                <h2 id="bfWelcomeTitle">
+                    BLACK
+                    <span>FRIDAY</span>
+                </h2>
+
+                <div class="bf-welcome-divider"></div>
+
+                <h3>DE LA FÁBRICA DE LAS MILANESAS</h3>
+
+                <p class="bf-welcome-slogan">
+                    Los mejores momentos se disfrutan con algo rico.
+                    ¡Aprovechá nuestras ofertas!
+                </p>
+
+                <button class="bf-welcome-button" id="bfWelcomeButton" type="button">
+                    ¡QUIERO VER LAS OFERTAS!
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <span class="bf-welcome-decoration" aria-hidden="true">BF</span>
+
+            <p class="bf-welcome-footer">
+                PROMOCIONES ESPECIALES · OFERTAS POR TIEMPO LIMITADO
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- =====================================
+         ENCABEZADO BLACK FRIDAY
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="black-friday-banner">
+
+            <div class="bf-top">
+
+                <div class="black-friday-brand">
+                    <span class="logo-icon">LF</span>
+
+                    <span class="logo-text">
+                        <strong>LA FÁBRICA</strong>
+                        <small>DE LAS MILANESAS</small>
+                    </span>
+                </div>
+
+                <span class="bf-edition">EDICIÓN ESPECIAL</span>
+
+            </div>
+
+            <div class="bf-main">
+
+                <span class="bf-small">LLEGÓ EL MOMENTO DE APROVECHAR</span>
+
+                <h1>
+                    BLACK
+                    <span>FRIDAY</span>
+                </h1>
+
+                <p>Ofertas especiales para disfrutar mucho más.</p>
+
+            </div>
+
+            <div class="bf-bottom">
+                <span>PRECIOS ESPECIALES</span>
+                <span class="bf-star">✦</span>
+                <span>OFERTAS POR TIEMPO LIMITADO</span>
+            </div>
+
+            <div class="bf-decoration bf-decoration-one">BF</div>
+            <div class="bf-decoration bf-decoration-two">SALE</div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         NAVEGACIÓN DE CATEGORÍAS
+    ====================================== -->
+
+    <nav class="category-nav" aria-label="Categorías del catálogo">
+
+        <div class="category-container">
+
+            <a href="#milanesas" class="category-link active">
+                Milanesas
+            </a>
+
+            <a href="#elaborados" class="category-link">
+                Elaborados
+            </a>
+
+            <a href="#congelados" class="category-link">
+                Congelados
+            </a>
+
+            <a href="#combos" class="category-link">
+                Combos
+            </a>
+
+            <a href="#vegetarianas" class="category-link">
+                Vegetarianas
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================
+         CATÁLOGO
+    ====================================== -->
+
+    <main>
+
+        <section class="catalogo">
+
+            <div class="catalogo-heading">
+                <span class="section-tag">NUESTROS PRODUCTOS</span>
+                <h2>EL CATÁLOGO</h2>
+                <p>Encontrá todo lo que tenemos para ofrecerte.</p>
+            </div>
+
+
+            <!-- MILANESAS -->
+
+            <section class="product-section" id="milanesas">
+
+                <div class="section-heading">
+                    <h2>Milanesas</h2>
+                    <span class="section-line"></span>
+                </div>
+
+                <div class="product-grid" data-categoria="milanesas">
+                    <p class="catalogo-loading">Próximamente...</p>
+                </div>
+
+            </section>
+
+
+            <!-- ELABORADOS -->
+
+            <section class="product-section" id="elaborados">
+
+                <div class="section-heading">
+                    <h2>Elaborados</h2>
+                    <span class="section-line"></span>
+                </div>
+
+                <div class="product-grid" data-categoria="elaborados">
+                    <p class="catalogo-loading">Próximamente...</p>
+                </div>
+
+            </section>
+
+
+            <!-- CONGELADOS -->
+
+            <section class="product-section" id="congelados">
+
+                <div class="section-heading">
+                    <h2>Congelados</h2>
+                    <span class="section-line"></span>
+                </div>
+
+                <div class="product-grid" data-categoria="congelados">
+                    <p class="catalogo-loading">Próximamente...</p>
+                </div>
+
+            </section>
+
+
+            <!-- COMBOS -->
+
+            <section class="product-section" id="combos">
+
+                <div class="section-heading">
+                    <h2>Combos</h2>
+                    <span class="section-line"></span>
+                </div>
+
+                <div class="product-grid" data-categoria="combos">
+                    <p class="catalogo-loading">Próximamente...</p>
+                </div>
+
+            </section>
+
+
+            <!-- VEGETARIANAS -->
+
+            <section class="product-section" id="vegetarianas">
+
+                <div class="section-heading">
+                    <h2>Vegetarianas</h2>
+                    <span class="section-line"></span>
+                </div>
+
+                <div class="product-grid" data-categoria="vegetarianas">
+                    <p class="catalogo-loading">Próximamente...</p>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         PIE DE PÁGINA
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <h2>LA FÁBRICA</h2>
+                <p>DE LAS MILANESAS</p>
+            </div>
+
+            <div class="footer-info">
+                <h3>CONTACTO</h3>
+                <p>Huaico Alto, Gorriti</p>
+                <p>Consultas y pedidos por WhatsApp</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 La Fábrica de las Milanesas. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
