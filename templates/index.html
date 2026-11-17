@@ -4,69 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="La Fábrica de las Milanesas. Conocé nuestro catálogo de productos, elaborados y promociones.">
+    <meta name="description" content="La Fábrica de las Milanesas. Conocé nuestros productos, elaborados, congelados y combos.">
 
-    <title>La Fábrica de las Milanesas | Catálogo</title>
+    <title>La Fábrica de las Milanesas | Black Friday</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- =====================================
-         BIENVENIDA BLACK FRIDAY
-    ====================================== -->
+    <!-- ========================================
+         VENTANA DE BIENVENIDA
+    ========================================= -->
 
-    <div class="bf-welcome-overlay" id="bfWelcome"
-         role="dialog" aria-modal="true"
-         aria-labelledby="bfWelcomeTitle">
+    <div class="bf-welcome-overlay" id="bfWelcome">
 
         <div class="bf-welcome-card">
 
-            <span class="bf-welcome-tag">EDICIÓN ESPECIAL</span>
+            <span class="bf-welcome-tag">BLACK FRIDAY</span>
 
             <div class="bf-welcome-content">
 
-                <p class="bf-welcome-intro">¡LLEGÓ EL MOMENTO DE APROVECHAR!</p>
+                <p class="bf-welcome-intro">
+                    Bienvenido a
+                </p>
 
                 <h2 id="bfWelcomeTitle">
-                    BLACK
-                    <span>FRIDAY</span>
+                    La Fábrica de las Milanesas
                 </h2>
 
                 <div class="bf-welcome-divider"></div>
 
-                <h3>DE LA FÁBRICA DE LAS MILANESAS</h3>
-
                 <p class="bf-welcome-slogan">
-                    Los mejores momentos se disfrutan con algo rico.
-                    ¡Aprovechá nuestras ofertas!
+                    Calidad, sabor y buenos precios.
                 </p>
 
-                <button class="bf-welcome-button" id="bfWelcomeButton" type="button">
-                    ¡QUIERO VER LAS OFERTAS!
-                    <span>→</span>
+                <button class="bf-welcome-button" id="bfWelcomeButton">
+                    EXPLORAR PRODUCTOS
                 </button>
 
             </div>
 
-            <span class="bf-welcome-decoration" aria-hidden="true">BF</span>
+            <div class="bf-welcome-decoration"></div>
 
             <p class="bf-welcome-footer">
-                PROMOCIONES ESPECIALES · OFERTAS POR TIEMPO LIMITADO
+                BLACK FRIDAY · EDICIÓN ESPECIAL
             </p>
 
         </div>
+
     </div>
 
 
-    <!-- =====================================
+    <!-- ========================================
          ENCABEZADO BLACK FRIDAY
-    ====================================== -->
+    ========================================= -->
 
     <header class="header">
 
@@ -75,54 +72,63 @@
             <div class="bf-top">
 
                 <div class="black-friday-brand">
-                    <span class="logo-icon">LF</span>
 
-                    <span class="logo-text">
-                        <strong>LA FÁBRICA</strong>
+                    <div class="logo-icon">
+                        LF
+                    </div>
+
+                    <div class="logo-text">
+                        <span>LA FÁBRICA</span>
                         <small>DE LAS MILANESAS</small>
-                    </span>
+                    </div>
+
                 </div>
 
-                <span class="bf-edition">EDICIÓN ESPECIAL</span>
+                <span class="bf-edition">
+                    EDICIÓN ESPECIAL
+                </span>
 
             </div>
 
+
             <div class="bf-main">
 
-                <span class="bf-small">LLEGÓ EL MOMENTO DE APROVECHAR</span>
+                <p class="bf-small">
+                    PREPARATE PARA DESCUBRIR
+                </p>
 
                 <h1>
                     BLACK
                     <span>FRIDAY</span>
                 </h1>
 
-                <p>Ofertas especiales para disfrutar mucho más.</p>
+                <p class="bf-bottom">
+                    GRANDES PRODUCTOS · GRANDES OPORTUNIDADES
+                </p>
 
             </div>
 
-            <div class="bf-bottom">
-                <span>PRECIOS ESPECIALES</span>
+
+            <div class="bf-decoration">
                 <span class="bf-star">✦</span>
-                <span>OFERTAS POR TIEMPO LIMITADO</span>
+                <span class="bf-star">✦</span>
+                <span class="bf-star">✦</span>
             </div>
-
-            <div class="bf-decoration bf-decoration-one">BF</div>
-            <div class="bf-decoration bf-decoration-two">SALE</div>
 
         </div>
 
     </header>
 
 
-    <!-- =====================================
-         NAVEGACIÓN DE CATEGORÍAS
-    ====================================== -->
+    <!-- ========================================
+         NAVEGACIÓN POR CATEGORÍAS
+    ========================================= -->
 
-    <nav class="category-nav" aria-label="Categorías del catálogo">
+    <nav class="category-nav">
 
         <div class="category-container">
 
-            <a href="#milanesas" class="category-link active">
+            <a href="#milanesas" class="category-link">
                 Milanesas
             </a>
 
@@ -147,134 +153,900 @@
     </nav>
 
 
-    <!-- =====================================
-         CATÁLOGO
-    ====================================== -->
+    <!-- ========================================
+         CATÁLOGO DE PRODUCTOS
+    ========================================= -->
 
-    <main>
+    <main class="catalogo">
 
-        <section class="catalogo">
+        <div class="catalogo-heading">
 
-            <div class="catalogo-heading">
-                <span class="section-tag">NUESTROS PRODUCTOS</span>
-                <h2>EL CATÁLOGO</h2>
-                <p>Encontrá todo lo que tenemos para ofrecerte.</p>
+            <span class="section-tag">
+                NUESTRO CATÁLOGO
+            </span>
+
+            <h2>
+                Descubrí nuestros productos
+            </h2>
+
+            <p>
+                Encontrá tus favoritos y conocé todo lo que tenemos para ofrecerte.
+            </p>
+
+        </div>
+
+
+        <!-- ====================================
+             CATEGORÍA: MILANESAS
+        ===================================== -->
+
+        <section class="product-section" id="milanesas">
+
+            <div class="section-heading">
+
+                <h2>
+                    Milanesas
+                </h2>
+
+                <span class="section-line"></span>
+
             </div>
 
-
-            <!-- MILANESAS -->
-
-            <section class="product-section" id="milanesas">
-
-                <div class="section-heading">
-                    <h2>Milanesas</h2>
-                    <span class="section-line"></span>
-                </div>
-
-                <div class="product-grid" data-categoria="milanesas">
-                    <p class="catalogo-loading">Próximamente...</p>
-                </div>
-
-            </section>
+            <div class="product-grid" data-categoria="milanesas">
 
 
-            <!-- ELABORADOS -->
-
-            <section class="product-section" id="elaborados">
-
-                <div class="section-heading">
-                    <h2>Elaborados</h2>
-                    <span class="section-line"></span>
-                </div>
-
-                <div class="product-grid" data-categoria="elaborados">
-                    <p class="catalogo-loading">Próximamente...</p>
-                </div>
-
-            </section>
-
-
-            <!-- CONGELADOS -->
-
-            <section class="product-section" id="congelados">
-
-                <div class="section-heading">
-                    <h2>Congelados</h2>
-                    <span class="section-line"></span>
-                </div>
-
-                <div class="product-grid" data-categoria="congelados">
-                    <p class="catalogo-loading">Próximamente...</p>
-                </div>
-
-            </section>
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Pollo</h3>
+                        <p>Mucho pollo y poco pan rallado.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
 
 
-            <!-- COMBOS -->
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Carne</h3>
+                        <p>Tiernas y sabrosas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
 
-            <section class="product-section" id="combos">
 
-                <div class="section-heading">
-                    <h2>Combos</h2>
-                    <span class="section-line"></span>
-                </div>
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🧀</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Pollo Rellena de Jamón y Queso</h3>
+                        <p>Con mucho queso.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
 
-                <div class="product-grid" data-categoria="combos">
-                    <p class="catalogo-loading">Próximamente...</p>
-                </div>
 
-            </section>
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Pulpa</h3>
+                        <p>Grandes y ricas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
 
 
-            <!-- VEGETARIANAS -->
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Cerdo</h3>
+                        <p>Cerdo de primera.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
 
-            <section class="product-section" id="vegetarianas">
 
-                <div class="section-heading">
-                    <h2>Vegetarianas</h2>
-                    <span class="section-line"></span>
-                </div>
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Hígado</h3>
+                        <p>Ricas como siempre.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
 
-                <div class="product-grid" data-categoria="vegetarianas">
-                    <p class="catalogo-loading">Próximamente...</p>
-                </div>
 
-            </section>
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Mondongo</h3>
+                        <p>Especiales de la casa.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Peceto</h3>
+                        <p>Milanesas premium.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Llama</h3>
+                        <p>Una propuesta diferente para descubrir nuevos sabores.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🐟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Pejerrey</h3>
+                        <p>Stock limitado.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🧀</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Muzzarella</h3>
+                        <p>El mejor queso muzzarella.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🧀</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Muzzarella con Bondiola</h3>
+                        <p>Sarpadas de ricas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🐟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Milanesas</span>
+                        <h3>Milanesa de Merluza</h3>
+                        <p>Calidad premium.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             CATEGORÍA: ELABORADOS
+        ===================================== -->
+
+        <section class="product-section" id="elaborados">
+
+            <div class="section-heading">
+
+                <h2>
+                    Elaborados
+                </h2>
+
+                <span class="section-line"></span>
+
+            </div>
+
+            <div class="product-grid" data-categoria="elaborados">
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍔</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Hamburguesa de Carne</h3>
+                        <p>Contiene 12 unidades por kg.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍔</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Hamburguesa de Pollo</h3>
+                        <p>Contiene 12 unidades por kg.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥘</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Albóndigas de Carne</h3>
+                        <p>Contiene 12 unidades por kg.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥘</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Albóndigas de Pollo</h3>
+                        <p>Contiene 12 unidades por kg.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Kupi</h3>
+                        <p>Contiene 12 unidades por kg.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍗</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Roulet de Pollo</h3>
+                        <p>Riquísimos arrolladitos.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍗</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Croquetas de Pollo</h3>
+                        <p>Riquísimas y únicas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍢</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Brochet de Pollo</h3>
+                        <p>Bandejas de 3 unidades.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por unidad</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍢</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Brochet de Carne</h3>
+                        <p>Bandejas de 3 unidades.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por unidad</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Lengua a la Vinagreta</h3>
+                        <p>Presentación en bandeja de 300 g.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥩</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Matambre Arrollado</h3>
+                        <p>Cortado en fetas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍗</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Elaborados</span>
+                        <h3>Arrollado de Pollo Cocido</h3>
+                        <p>Cortado en fetas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             CATEGORÍA: CONGELADOS
+        ===================================== -->
+
+        <section class="product-section" id="congelados">
+
+            <div class="section-heading">
+
+                <h2>
+                    Congelados
+                </h2>
+
+                <span class="section-line"></span>
+
+            </div>
+
+            <div class="product-grid" data-categoria="congelados">
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🦖</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Ricosaurios</h3>
+                        <p>Calidad y sabor para disfrutar en cualquier momento.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍗</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Patitas de Pollo</h3>
+                        <p>Pequeñas, crocantes y llenas de sabor.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🐟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Formitas de Merluza</h3>
+                        <p>Deliciosas porciones de merluza listas para disfrutar.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🧀</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Bastoncitos de Muzzarella</h3>
+                        <p>Todo el sabor del queso en cada bocado.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🧀</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Medallón de Pollo con Jamón y Queso</h3>
+                        <p>Una combinación de sabores para disfrutar en cada comida.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍗</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Nuggets</h3>
+                        <p>Bocados ideales para compartir y disfrutar.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥬</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Croquetas de Espinaca y Zapallo</h3>
+                        <p>Una alternativa diferente para sumar variedad a tus comidas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Papas Tradicionales</h3>
+                        <p>Un clásico que siempre acompaña tus comidas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Papas Noisette</h3>
+                        <p>Pequeñas porciones de papa doradas y sabrosas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍟</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Papas Caritas</h3>
+                        <p>Una opción divertida y deliciosa para acompañar tus platos.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥬</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Congelados</span>
+                        <h3>Medallón de Queso y Espinaca</h3>
+                        <p>Una combinación diferente para tus comidas de todos los días.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             CATEGORÍA: COMBOS
+        ===================================== -->
+
+        <section class="product-section" id="combos">
+
+            <div class="section-heading">
+
+                <h2>
+                    Combos
+                </h2>
+
+                <span class="section-line"></span>
+
+            </div>
+
+            <div class="product-grid" data-categoria="combos">
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍔</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Combos</span>
+                        <h3>Hamburguesas x 10</h3>
+                        <p>Diez hamburguesas para compartir y disfrutar.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por unidad</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🎁</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Combos</span>
+                        <h3>Combo Ahorro</h3>
+                        <p>Una opción práctica para llevar más y disfrutar.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por unidad</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍔</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Combos</span>
+                        <h3>Hamburguesas x 20</h3>
+                        <p>Veinte hamburguesas para compartir en grande.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por unidad</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍔</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Combos</span>
+                        <h3>Combo Clásico</h3>
+                        <p>Una propuesta clásica para disfrutar en cualquier ocasión.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por unidad</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ====================================
+             CATEGORÍA: VEGETARIANAS
+        ===================================== -->
+
+        <section class="product-section" id="vegetarianas">
+
+            <div class="section-heading">
+
+                <h2>
+                    Vegetarianas
+                </h2>
+
+                <span class="section-line"></span>
+
+            </div>
+
+            <div class="product-grid" data-categoria="vegetarianas">
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥬</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Vegetarianas</span>
+                        <h3>Hamburguesas Vegetarianas</h3>
+                        <p>Una alternativa vegetal para disfrutar en cualquier momento.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥒</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Vegetarianas</span>
+                        <h3>Milanesas de Zapallito</h3>
+                        <p>Una opción diferente, rica y llena de sabor.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🥬</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Vegetarianas</span>
+                        <h3>Milanesas de Coreanito</h3>
+                        <p>Una alternativa original para variar tus comidas.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <div class="product-card-image">
+                        <span>🍆</span>
+                    </div>
+                    <div class="product-card-info">
+                        <span class="product-card-category">Vegetarianas</span>
+                        <h3>Milanesa de Berenjena</h3>
+                        <p>Un clásico vegetal lleno de sabor.</p>
+                        <div class="product-card-bottom">
+                            <strong>Consultar precio</strong>
+                            <span>Por kg</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- =====================================
+    <!-- ========================================
          PIE DE PÁGINA
-    ====================================== -->
+    ========================================= -->
 
     <footer class="footer">
 
         <div class="footer-content">
 
             <div class="footer-brand">
-                <h2>LA FÁBRICA</h2>
-                <p>DE LAS MILANESAS</p>
+
+                <h2>
+                    LA FÁBRICA
+                </h2>
+
+                <p>
+                    DE LAS MILANESAS
+                </p>
+
             </div>
 
+
             <div class="footer-info">
-                <h3>CONTACTO</h3>
-                <p>Huaico Alto, Gorriti</p>
-                <p>Consultas y pedidos por WhatsApp</p>
+
+                <p>
+                    Calidad y sabor en cada producto.
+                </p>
+
+                <p>
+                    Consultá nuestros productos y precios.
+                </p>
+
             </div>
 
         </div>
 
+
         <div class="footer-bottom">
-            <p>© 2026 La Fábrica de las Milanesas. Todos los derechos reservados.</p>
+
+            <p>
+                © 2026 La Fábrica de las Milanesas. Todos los derechos reservados.
+            </p>
+
         </div>
 
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
